@@ -1,0 +1,165 @@
+body {
+	background-color: #fff;
+}
+
+h2.subtitle-contato {
+	margin: 320px 100px 0 0;
+	font-size: 46px;
+	color: #004c1e;
+	float: right;
+	text-align: right;
+	width: 430px;
+	line-height: 40px;
+	padding-bottom: 20px;
+}
+
+.content-contato {
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	color: #5d5d72;
+	width: 428px;
+	float: right;
+	text-align: justify;
+	margin-right: 92px;
+	line-height: 28px;
+	margin-top: 20px;
+}
+
+.circle-mapa {
+	background: url(../img/mapa-canossa.jpg);
+	border-radius: 200px;
+	width: 370px;
+	height: 370px;
+	margin-left: 130px;
+	margin-top: 20px;
+
+}
+
+.circle-mapa iframe {
+		border-radius: 200px;
+		margin-right: 50px;
+
+}
+
+.mapa button {
+	width: 230px;
+	height: 60px;
+	background-color: #004c1e;
+	background-image: none;
+	margin-left:200px;
+	margin-top: -65px;
+	font-size: 11px;
+}
+
+.mapa button:hover{
+	text-decoration: underline;
+}
+
+.formulario-contato {
+	width: 420px;
+	height: 500px;
+	background-color: #f3f3f3;
+	border-radius: 5px;
+
+}
+
+form {
+	color: #004c1e;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
+	margin-left: 20px;
+}
+
+.input-nome, .input-email {
+	width: 270px;
+	height: 45px;
+	border-radius: 5px;
+	border:none;
+	margin-top: 15px;
+	margin-left: 60px
+}
+
+.input-mensagem {
+	width: 270px;
+	height: 150px;
+	border-radius: 5px;
+	border:none;
+	margin-top: -10px;
+	margin-left: 24px
+}
+
+.enviar-botao {
+	width: 380px;
+	height: 65px;
+	background-image: url(../img/botao-enviar-contato.jpg);
+	margin-left:0px;
+	margin-top: 20px;
+	font-size: 14px;
+	border:none;
+	border-radius: 5px;
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+}
+
+.enviar-botao:hover{
+	background: #012b11 url(../img/botao-enviar-contto.html);
+}
+
+.contato-endereco {
+	width: 330px;
+	text-align: center;
+	margin-left: 142px;
+	margin-top: 130px;
+	float: left;
+}
+
+.contato-endereco h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	color: #004c1e;
+}
+
+.contato-endereco p {
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	color: #5d5d72;
+}
+
+.contato-email {
+	width: 370px;
+	text-align: center;
+	margin-top: 67px;
+	margin-right: 125px;
+	float: right;
+}
+
+.contato-email h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	color: #df295f;
+}
+
+.contato-email p {
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	color: #5d5d72;
+}
+
+.optin-contato {
+	width: 380px;
+	color: #5d5d72;
+
+}
+
+.radio-input-optin-contato-1 {
+	margin-left: 0px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.radio-input-optin-contato {
+	margin-left: 40px;
+		margin-right: 10px;
+
+}

@@ -1,0 +1,451 @@
+body {
+	background-color: #fff !important;
+}
+
+#content-colabore{
+	margin-left: 88px;
+	margin-top: 30px;
+	height: 100%;
+}
+
+.colabore-box {
+	width: 422px;
+	height: 273px;
+	background-image: url(../img/colabore-box-bg.jpg);
+	float: left;
+	text-align: center;
+	margin:10px;
+}
+
+.colabore-box-pf {
+	width: 422px;
+	height: 273px;
+	background-image: url(../img/colabore-box-bg-pf.jpg);
+	float: left;
+	text-align: center;
+	margin:10px;
+}
+
+.colabore-box-pj {
+	width: 422px;
+	height: 273px;
+	background-image: url(../img/colabore-box-bg-pj.jpg);
+	float: left;
+	text-align: center;
+	margin:10px;
+}
+
+.colabore-box-fumcad {
+	width: 422px;
+	height: 273px;
+	background-image: url(../img/colabore-box-bg-fumcad.jpg);
+	float: left;
+	text-align: center;
+	margin:10px;
+}
+
+.colabore-box-voluntario {
+	background-image: url(../img/colabore-box-bg-voluntario.jpg);
+	width: 422px;
+	height: 273px;
+	float: left;
+	text-align: center;
+	margin:10px;
+}
+
+.colabore-box h1, .colabore-box-fumcad h1, .colabore-box-pf h1, .colabore-box-pj h1  {
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+	width: 290px;
+	font-weight: 700;
+	line-height: 35px;
+	margin-left: 67px;
+	margin-top: 110px;
+}
+
+.colabore-box-voluntario h1 {
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+	width: 290px;
+	font-weight: 700;
+	line-height: 35px;
+	margin-left: 67px;
+	margin-top: 95px;
+}
+
+.colabore-box-voluntario button {
+	width: 332px;
+	height: 65px;
+	background-image: url(../img/bt-cursos-box.png);
+	margin-top: 0px;
+}
+
+.colabore-box button, .colabore-box-pf button, .colabore-box-pj button, .colabore-box-fumcad button {
+	width: 332px;
+	height: 65px;
+	background-image: url(../img/bt-cursos-box.png);
+	margin-top: 20px;
+}
+
+.colabore-box button:hover, .colabore-box-voluntario button:hover, .colabore-box-pf button:hover, .colabore-box-pj button:hover, .colabore-box-fumcad button:hover {
+	background: #ff9200;
+}
+
+.descricao-colabore {
+	width: 400px;
+	margin:290px 0 0 550px;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	font-weight: 400px;
+	color: #5d5d72;
+}
+
+.voltar a {
+	font-size: 18px;
+	font-family:'Montserrat', sans-serif;
+	font-weight: bold;
+	color: #ff9000;
+	text-transform: uppercase;
+	text-decoration: none;	
+}
+
+.voltar {
+	margin-left: 75px;
+	margin-top: 360px;
+}
+
+.voltar img {
+	margin-right: 20px;
+	margin-top: -2px;
+}
+
+.banner-fumcad {
+	width: 909px;
+	height: 273px;
+	background-image: url(../img/banner-fumcad.jpg);
+	margin: 50px auto 0 auto;
+}
+
+.banner-fumcad span {
+	color: #fff;
+	font-size: 36px;
+	font-family: 'Lato', sans-serif;
+	margin-left: 40px;
+	position: absolute;
+	padding-top: 80px;
+}
+
+.banner-fumcad h1 {
+	font-size: 62px;
+	color: #fff;
+	width: 315px;
+	line-height: 54px;
+	margin-left: 40px;
+	padding-top: 140px;
+}
+
+.banner-fumcad h4 {
+	color: #fff;
+	font-size: 24px;
+	width: 300px;
+	text-align: center;
+	float: right;
+	margin-top: -50px;
+	line-height: 25px;
+	margin-right: 25px;
+}
+
+#content-fumcad {
+	width: 860px;
+	margin:40px auto 0 auto;
+	font-family: 'Lato', sans-serif;
+	font-style: 16px;
+	color: #5d5d72;
+	font-weight: 400px;
+}
+
+#content-fumcad h3 {
+	color: #ff9000;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+#content-fumcad span {
+	color: #ff9000;
+}
+
+.banner-pf {
+	width: 909px;
+	height: 273px;
+	background-image: url(../img/banner-pf.jpg);
+	margin: 20px auto 0 auto;
+}
+
+.banner-pj {
+	width: 909px;
+	height: 273px;
+	background-image: url(../img/banner-pj.jpg);
+	margin: 20px auto 0 auto;
+}
+
+.banner-voluntarios {
+	width: 909px;
+	height: 810px;
+	background-image: url(../img/banner-voluntarios.jpg);
+	margin: 20px auto 0 auto;
+}
+
+.banner-doe {
+	width: 909px;
+	height: 810px;
+	background-image: url(../img/banner-voluntarios02.jpg);
+	margin: 20px auto 0 auto;
+}
+
+.banner-doe02 {
+	width: 909px;
+	height: 810px;
+	background-image: url(../img/banner-voluntarios03.jpg);
+	margin: 20px auto 0 auto;
+}
+
+.banner-apadrinhamento {
+	width: 909px;
+	height: 810px;
+	background-image: url(../img/apadrinhamento.jpg);
+	margin: 20px auto 0 auto;
+}
+
+.banner-pf span, .banner-pj span, .banner-voluntarios span {
+	color: #fff;
+	font-size: 36px;
+	font-family: 'Lato', sans-serif;
+	margin-left: 40px;
+	position: absolute;
+	padding-top: 60px;
+}
+
+.banner-pf h1, .banner-pj h1, .banner-voluntarios h1 {
+	font-size: 62px;
+	color: #fff;
+	width: 315px;
+	line-height: 54px;
+	margin-left: 40px;
+	padding-top: 110px;
+}
+
+.banner-pf h4, .banner-pj h4, .banner-voluntarios h4 {
+	color: #fff;
+	font-size: 24px;
+	width: 300px;
+	text-align: center;
+	float: right;
+	margin-top: -70px;
+	line-height: 25px;
+	margin-right: 25px;
+}
+
+form {
+	color: #f59c2b;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
+	margin-left: 20px;
+	height: 850px;
+}
+
+form span {
+	color: #4a4a4a;
+	font-size: 10px;
+	position: absolute;
+}
+
+.input-nome, .input-cpf {
+	width: 270px;
+	height: 45px;
+	border-radius: 5px;
+	margin-left: 140px;
+	background-color: #f8f8f8;
+	border: #f3f3f3 solid 1px;
+	position: absolute;
+	padding-left: 10px;
+	color: #4a4a4a;
+	text-transform: uppercase;
+}
+
+.input-nome {
+	margin-top: -35px;
+}
+
+.input-nome-valor {
+	width: 270px;
+	height: 45px;
+	border-radius: 5px;
+	margin-left: 140px;
+	background-color: #f8f8f8;
+	border: #f3f3f3 solid 1px;
+	position: absolute;
+	padding-left: 10px;
+	color: #4a4a4a;
+	text-transform: uppercase;
+	margin-top: -35px;
+	font-size: 22px;
+	font-family: "Montserrat", sans-serif;
+}
+
+
+.input-cpf {
+	margin-top: -35px;
+}
+
+.input-mensagem {
+	width: 270px;
+	height: 150px;
+	border-radius: 5px;
+	border:none;
+	margin-top: 0px;
+	margin-left: 24px
+}
+
+.enviar-botao {
+	width: 380px;
+	height: 65px;
+	background-image: url(../img/botao-enviar-contato.jpg);
+	margin-left:0px;
+	margin-top: 30px;
+	font-size: 14px;
+	border:none;
+	border-radius: 5px;
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+}
+
+.enviar-botao a:hover{
+	background-color: #000
+}
+
+.content-colabore-left {
+	width: 450px;
+	height: 700px;
+	margin-left: 60px;
+	float: left;
+}
+
+.content-colabore-right {
+	width: 440px;
+	height: 663px;
+	margin-right: 75px;
+	float: right;
+	background-color: #f59c2b;
+	border-radius: 5px;
+	color: #fff;
+	margin-top: 4px;
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+.content-colabore-right-voluntarios {
+	width: 440px;
+	height: 500px;
+	margin-right: 75px;
+	float: right;
+	background-color: #f59c2b;
+	border-radius: 5px;
+	color: #fff;
+	margin-top: 4px;
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+.content-colabore-right-juridico {
+	width: 440px;
+	height: 600px;
+	margin-right: 75px;
+	float: right;
+	background-color: #f59c2b;
+	border-radius: 5px;
+	color: #fff;
+	margin-top: 4px;
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+.form-nome {
+	padding-top: 50px
+}
+
+.form-text {
+	padding-top: 35px
+}
+
+.radio-input-masc {
+	margin-left:100px;
+	margin-top: 20px;
+	color: #4a4a4a;
+	margin-right: 10px
+}
+
+.radio-input {
+	margin-left:40px;
+	margin-right: 10px
+}
+
+.radio-input-pag {
+	margin-left:140px;
+	margin-right: 10px;
+	margin-bottom: 20px
+}
+
+.radio-input-pag-1 {
+	margin-left:51px;
+	margin-right: 10px;
+	margin-bottom: 20px
+}
+
+.radio-input-pag-1-3 {
+	margin-left:32px;
+	margin-right: 10px;
+	margin-bottom: 20px
+}
+
+.radio-input-pag-1-2 {
+	margin-left:56px;
+	margin-right: 10px;
+	margin-bottom: 20px
+}
+
+.content-colabore-left h2 {
+	font-size: 32px;
+	text-transform: none;
+	margin:0;
+}
+
+form h2 {
+	font-size: 32px;
+	text-transform: none;
+	margin-top: 40px
+}
+
+.radio-input-optin {
+	margin-left: 15px;
+}
+
+.enviar-botao-colaborar {
+	width: 456px;
+	height: 65px;
+	background-image: url(../img/botao-enviar-contato.jpg);
+	margin-left:-15px;
+	margin-top: 60px;
+	font-size: 14px;
+	border:none;
+	border-radius: 5px;
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+}
+
+.enviar-botao-colaborar:hover {
+	background: #ff9200 url(../img/botao-enviar-conato.html);
+}
+
