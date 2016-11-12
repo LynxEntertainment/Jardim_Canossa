@@ -1,14 +1,12 @@
 <?php
-
 class trocaURL {
     public $url;
     
-    public function __contruct(){
-        if(empty($_GET['paginas'])){
+    public function __construct() {
+        if (empty($_GET['pagina'])){
             $this->url = "paginas/home.php";
         } else {
             $this->url = "paginas/".$_GET["pagina"].".php";
         }
     }
-    
 }
