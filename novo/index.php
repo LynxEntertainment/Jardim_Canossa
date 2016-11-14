@@ -1,7 +1,11 @@
 <?php
+
+//session_save_path("/tmp");
 session_start();
 
-$_SESSION["idioma"] = "por";
+if (!isset($_SESSION["idioma"])) {
+    $_SESSION["idioma"] = "por";
+}
 
 require_once 'model/trocaPagina.php';
 ?>
@@ -23,6 +27,8 @@ require_once 'model/trocaPagina.php';
         <link rel="icon" type="image/png" href="img/favicon.ico"/>
         <link rel="stylesheet" href="css/index.css"/>
         <link rel="stylesheet" href="css/jssor.css"/>
+        <link rel="stylesheet" href="css/pagina.css"/>
+        <link rel="stylesheet" href="css/fontfaces.css"/>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
@@ -66,85 +72,85 @@ require_once 'model/trocaPagina.php';
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Quem somos</a>
                         <div class="sub-menu">
-                            <a href="#">A associação</a>
-                            <a href="#">Jardim Canossa</a>
-                            <a href="#">Espaço Vida</a>
-                            <a href="#">Obra Social M.C.</a>
-                            <a href="#">Sta. Madalena de Canossa</a>
-                            <a href="#">Irmãs Canossianas</a>
-                            <a href="#">Irmã Rina Guarnieri</a>
-                            <a href="#">Colaboradores</a>
-                            <a href="#">Objetivos Esperados</a>
+                            <a href="?pagina=associacao">A associação</a>
+                            <a href="?pagina=jardim-canossa">Jardim Canossa</a>
+                            <a href="?pagina=espaco-vida">Espaço Vida</a>
+                            <a href="?pagina=obra-social">Obra Social M.C.</a>
+                            <a href="?pagina=madalena-de-canossa">Sta. Madalena de Canossa</a>
+                            <a href="?pagina=canossianas">Irmãs Canossianas</a>
+                            <a href="?pagina=rina-guarnieri">Irmã Rina Guarnieri</a>
+                            <a href="?pagina=colaboradores">Colaboradores</a>
+                            <a href="?pagina=objetivos">Objetivos Esperados</a>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="#">Fotos</a></div>
-                    <div class="menu-item"><a href="#">Apoio</a></div>
+                    <div class="menu-item"><a href="?pagina=fotos">Fotos</a></div>
+                    <div class="menu-item"><a href="?pagina=apoio">Apoio</a></div>
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Colabore conosco</a>
                         <div class="sub-menu">
-                            <div class="sub-menu-item"><a href="#">Doe para o Jardim Canossa</a></div>
-                            <div class="sub-menu-item"><a href="#">Doe para o Espaço Vida</a></div>
-                            <div class="sub-menu-item"><a href="#">Doe para a Obra Social M.C.</a></div>
-                            <div class="sub-menu-item"><a href="#">Apadrinhamento</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-jardim-canossa">Doe para o Jardim Canossa</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-espaco-vida">Doe para o Espaço Vida</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-obra-social">Doe para a Obra Social M.C.</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=apadrinhamento">Apadrinhamento</a></div>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="#">Contato</a></div>
+                    <div class="menu-item"><a href="?pagina=contato">Contato</a></div>
                 </nav>
                 <nav data-idioma="eng">
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Who we are</a>
                         <div class="sub-menu">
-                            <a href="#">The Association</a>
-                            <a href="#">Jardim Canossa</a>
-                            <a href="#">Espaço Vida</a>
-                            <a href="#">M.C. Social Work</a>
-                            <a href="#">St. Magdalene of Canossa</a>
-                            <a href="#">Canossian Sisters</a>
-                            <a href="#">Sister Rina Guarnieri</a>
-                            <a href="#">Collaborators</a>
-                            <a href="#">Expected Goals</a>
+                            <a href="?pagina=associacao">The Association</a>
+                            <a href="?pagina=jardim-canossa">Jardim Canossa</a>
+                            <a href="?pagina=espaco-vida">Espaço Vida</a>
+                            <a href="?pagina=obra-social">M.C. Social Work</a>
+                            <a href="?pagina=madalena-de-canossa">St. Magdalene of Canossa</a>
+                            <a href="?pagina=canossianas">Canossian Sisters</a>
+                            <a href="?pagina=rina-guarnieri">Sister Rina Guarnieri</a>
+                            <a href="?pagina=colaboradores">Collaborators</a>
+                            <a href="?pagina=objetivos">Expected Goals</a>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="#">Photos</a></div>
-                    <div class="menu-item"><a href="#">Support</a></div>
+                    <div class="menu-item"><a href="?pagina=fotos">Photos</a></div>
+                    <div class="menu-item"><a href="?pagina=apoio">Support</a></div>
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Collaborate with us</a>
                         <div class="sub-menu">
-                            <div class="sub-menu-item"><a href="#">Donate to Jardim Canossa</a></div>
-                            <div class="sub-menu-item"><a href="#">Donate to Espaço Vida</a></div>
-                            <div class="sub-menu-item"><a href="#">Donate to M.C. Social Work</a></div>
-                            <div class="sub-menu-item"><a href="#">Godfathering</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-jardim-canossa">Donate to Jardim Canossa</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-espaco-vida">Donate to Espaço Vida</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-obra-social">Donate to M.C. Social Work</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=apadrinhamento">Child Sponsorship</a></div>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="#">Contact</a></div>
+                    <div class="menu-item"><a href="?pagina=contato">Contact</a></div>
                 </nav>
                 <nav data-idioma="ita">
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Chi siamo</a>
                         <div class="sub-menu">
-                            <a href="#">L´Associazione</a>
-                            <a href="#">Jardim Canossa</a>
-                            <a href="#">Espaço Vida</a>
-                            <a href="#">Opera Sociale M.C.</a>
-                            <a href="#">Sta. Maddalena di Canossa</a>
-                            <a href="#">Suore Canossiane</a>
-                            <a href="#">Suor Rina Guarnieri</a>
-                            <a href="#">Collaboratori</a>
-                            <a href="#">Obietivi</a>
+                            <a href="?pagina=associacao">L´Associazione</a>
+                            <a href="?pagina=jardim-canossa">Jardim Canossa</a>
+                            <a href="?pagina=espaco-vida">Espaço Vida</a>
+                            <a href="?pagina=obra-social">Opera Sociale M.C.</a>
+                            <a href="?pagina=madalena-de-canossa">Sta. Maddalena di Canossa</a>
+                            <a href="?pagina=canossianas">Suore Canossiane</a>
+                            <a href="?pagina=rina-guarnieri">Suor Rina Guarnieri</a>
+                            <a href="?pagina=colaboradores">Collaboratori</a>
+                            <a href="?pagina=objetivos">Obietivi</a>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="#">Fotografie</a></div>
-                    <div class="menu-item"><a href="#">Supporto</a></div>
+                    <div class="menu-item"><a href="?pagina=fotos">Fotografie</a></div>
+                    <div class="menu-item"><a href="?pagina=apoio">Supporto</a></div>
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Collaborare con noi</a>
                         <div class="sub-menu">
-                            <div class="sub-menu-item"><a href="#">Donnare Jardim Canossa</a></div>
-                            <div class="sub-menu-item"><a href="#">Donnare Espaço Vida</a></div>
-                            <div class="sub-menu-item"><a href="#">Donnare all'Opera Sociale</a></div>
-                            <div class="sub-menu-item"><a href="#">Sii un padrino</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-jardim-canossa">Donnare Jardim Canossa</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-espaco-vida">Donnare Espaço Vida</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=doe-obra-social">Donnare all'Opera Sociale</a></div>
+                            <div class="sub-menu-item"><a href="?pagina=apadrinhamento">Adozione a distanza</a></div>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="#">Contatto</a></div>
+                    <div class="menu-item"><a href="?pagina=contato">Contatto</a></div>
                 </nav>
                 <div id="idioma">
                     <a class="trigger" href="#" onclick="expandirSeletorIdioma()"><img></a>
@@ -155,16 +161,10 @@ require_once 'model/trocaPagina.php';
             </div>
         </header>
         <main>
-            <div id="banner">
-
-            </div>
-            <div id="conteudo">
-                <?php
-                $p = new trocaPagina();
-                
-                include $p->pagina;
-                ?>
-            </div>
+            <?php
+            $p = new trocaPagina();
+            include $p->pagina;
+            ?>
         </main>
         <footer>
             <div id="parceiros">
@@ -182,7 +182,7 @@ require_once 'model/trocaPagina.php';
                             $SlideEasing: $Jease$.$Linear,
                             $PauseOnHover: 4,
                             $SlideWidth: 112,
-                            $Cols: 6
+                            $Cols: 5
                         };
 
                         var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
@@ -212,29 +212,19 @@ require_once 'model/trocaPagina.php';
                         <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
                     </div>
                     <div data-u="slides">
-                        <div><img data-u="image" src="img/parceiros/caritas.jpg" /></div>
+                        <div><a href="http://www.caritas-siena.it/" target="_blank"><img data-u="image" src="img/parceiros/caritas.jpg" /></a></div>
                         <div><img data-u="image" src="img/parceiros/cata-ventos.jpg" /></div>
-                        <div><img data-u="image" src="img/parceiros/faem.jpg" /></div>
-                        <div><img data-u="image" src="img/parceiros/gruppo_india.jpg" /></div>
+                        <div><a href="https://www.facebook.com/pages/Faem-Federa%C3%A7%C3%A3o-De-Automobilismo-Do-Estado-Do-Maranh%C3%A3o/423132381134079?fref=ts" target="_blank"><img data-u="image" src="img/parceiros/faem.jpg" /></a></div>
+                        <div><a href="http://www.gruppoindia.it/" target="_blank"><img data-u="image" src="img/parceiros/gruppo_india.jpg" /></a></div>
                         <div><img data-u="image" src="img/parceiros/imperatriz.jpg" /></div>
                         <div><img data-u="image" src="img/parceiros/pastoral_da_crianca.jpg" /></div>
+                        <div><img data-u="image" src="img/parceiros/companhia-da-alegria.jpg" /></div>
                     </div>
                 </div>
                 <!-- #endregion Jssor Slider End -->
             </div>
             <div id="bar-rodape"></div>
             <div data-idioma="por" id="rodape">
-                <div class="coluna-rodape">
-                    <h1><a href="#">Quem Somos</a></h1>
-                    <a href="#">A Associação</a><br>
-                    <a href="#">Jardim Canossa</a><br>
-                    <a href="#">Espaço Vida</a><br>
-                    <a href="#">Irmãs Canossianas</a><br>
-                    <a href="#">Irmã Rina Guarnieri</a><br>
-                    <a href="#">Colaboradores</a><br>
-                    <a href="#">Objetivos Esperados</a><br>
-                    <h1><a href="#">Parceiros</a></h1>
-                </div>
                 <div class="coluna-rodape">
                     <h1>Links Úteis</h1>
                     <a href="http://w2.vatican.va/content/vatican/pt.html" target="_blank">Vaticano</a><br>
@@ -259,17 +249,6 @@ require_once 'model/trocaPagina.php';
             </div>
             <div data-idioma="eng" id="rodape">
                 <div class="coluna-rodape">
-                    <h1><a href="#">Who we are</a></h1>
-                    <a href="#">The Association</a><br>
-                    <a href="#">Jardim Canossa</a><br>
-                    <a href="#">Espaço Vida</a><br>
-                    <a href="#">Canossian Sisters</a><br>
-                    <a href="#">Sister Rina Guarnieri</a><br>
-                    <a href="#">Collaborators</a><br>
-                    <a href="#">Expected Goals</a><br>
-                    <h1><a href="#">Partners</a></h1>
-                </div>
-                <div class="coluna-rodape">
                     <h1>Useful Links</h1>
                     <a href="http://w2.vatican.va/content/vatican/pt.html" target="_blank">Vatican</a><br>
                     <a href="http://www.cnbb.org.br/" target="_blank">CNBB</a><br>
@@ -292,17 +271,6 @@ require_once 'model/trocaPagina.php';
                 </div>
             </div>
             <div data-idioma="ita" id="rodape">
-                <div class="coluna-rodape">
-                    <h1><a href="#">Chi Siamo</a></h1>
-                    <a href="#">L'Associazione</a><br>
-                    <a href="#">Jardim Canossa</a><br>
-                    <a href="#">Espaço Vida</a><br>
-                    <a href="#">Suore Canossiani</a><br>
-                    <a href="#">Suor Rina Guarnieri</a><br>
-                    <a href="#">Collaboratori</a><br>
-                    <a href="#">Obietivi</a><br>
-                    <h1><a href="#">Partner</a></h1>
-                </div>
                 <div class="coluna-rodape">
                     <h1>Link Utile</h1>
                     <a href="http://w2.vatican.va/content/vatican/pt.html" target="_blank">Vaticano</a><br>

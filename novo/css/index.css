@@ -1,118 +1,13 @@
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Thin.ttf");
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-ThinItalic.ttf");
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Light.ttf");
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-LightItalic.ttf");
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Italic.ttf");
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Medium.ttf");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-MediumItalic.ttf");
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Semibold.ttf");
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-SemiboldItalic.ttf.ttf");
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Bold.ttf");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-BoldItalic.ttf");
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Heavy.ttf");
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-HeavyItalic.ttf");
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-Black.ttf");
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: Lato;
-    src: url("../fonts/Lato2OFL/Lato-BlackItalic.ttf");
-    font-weight: 900;
-    font-style: italic;
-}
-
 body{
-    font-family: 'Lato', sans-serif;
-    margin: 0;
+    margin:0;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family:'Montserrat', 'Lato', sans-serif;
+}
+
+a{
+    text-decoration: none;
 }
 
 .oculto{
@@ -121,12 +16,13 @@ body{
 
 
 header{
-    background: #ffffff;
+    background: rgba(255,255,255,0.9);
     height: 120px;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 500;
 }
 
 #idioma{
@@ -263,14 +159,16 @@ nav .sub-menu a:hover{
 
 main{
     width:100%;
-    min-height: 550px;
+    display:block;
+    height: fit-content;
+    min-height: 400px;
 }
 
 footer{
     z-index:50;
     display: block;
     width: 100%;
-    position: absolute;
+    position: relative;
     margin: 0;
     overflow: hidden;
     background:#0e1b0c;
@@ -302,16 +200,15 @@ footer{
     width: 960px;
     margin-left: 50%;
     transform: translateX(-50%);
-    height: 350px;
 }
 
 .coluna-rodape{
     border-left: 1px solid #2e5128;
-    margin: 50px 0px;
+    margin: 10px 0px;
     padding: 0 9.5px;
     float: left;
     width: 300px;
-    height: 250px;
+    height: 200px;
 }
 
 .coluna-rodape:first-child{
