@@ -4,5 +4,11 @@
     <h2 data-idioma="ita">Fotografie</h2>
 </div>
 <div id='conteudo'>
-    <img src="img/em_construcao.jpg" width="1000"/>
+    <?php
+    if(isset($_GET['galeria'])){
+        include 'view/galeria/'.$_GET['galeria'].'.php';
+    } else {
+        include 'view/galeria/listar.php';
+    }
+    ?>
 </div>

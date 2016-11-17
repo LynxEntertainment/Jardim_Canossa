@@ -1,5 +1,5 @@
 <div id="pagina-titulo" class="pagina-home">
-    <div data-idioma="por" id="home-resumo">
+    <div data-idioma="por" class="home-destaque">
         <h1>Jardim Canossa</h1>
         <p>O Jardim Canossa nasceu de uma história iniciada em 1978
             com a chegada das Irmãs Canossianas na Vila Nova, Imperatriz.
@@ -9,7 +9,7 @@
         </p>
         <a href="?pagina=jardim-canossa">Saiba Mais</a>
     </div>
-    <div data-idioma="eng" id="home-resumo">
+    <div data-idioma="eng" class="home-destaque">
         <h1>Jardim Canossa</h1>
         <p>The Jardim Canossa was born from a story that begun in 1978
             with the arrival of the Canossian Sisters in Vila Nova, Imperatriz. 
@@ -19,7 +19,7 @@
         </p>
         <a href="?pagina=jardim-canossa">Learn More</a>
     </div>
-    <div data-idioma="ita" id="home-resumo">
+    <div data-idioma="ita" class="home-destaque">
         <h1>Jardim Canossa</h1>
         <p>Il Jardim Canossa nasce da una storia iniziata nel 1978 con
             l´arrivo delle Sorelle Canossiane nella Vila Nova, quartiere

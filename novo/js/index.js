@@ -42,6 +42,14 @@ function atualizarIdioma(novo) {
         $("*[data-idioma]").addClass("oculto");
         $("*[data-idioma='" + idioma + "']").removeClass("oculto");
         $(".trigger").children("img").attr("src", "img/icone-idioma-" + idioma + ".png");
+        
+        if(idioma == "por"){
+            $("title").html("ASSOCIAÇÃO MADALENA DE CANOSSA");
+        } else if(idioma == "eng"){
+            $("title").html("MADALENA DE CANOSSA ASSOCIATION");
+        } else if(idioma == "ita"){
+            $("title").html("ASSOCIAZIONE MADDALENA DI CANOSSA");
+        }
     });
     
     encolherSeletorIdioma();

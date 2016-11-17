@@ -3,7 +3,7 @@
     <h2 data-idioma="eng">Who we are</h2>
     <h2 data-idioma="ita">Chi siamo</h2>
     <h3 data-idioma="por">Santa Madalena de Canossa</h3>
-    <h3 data-idioma="eng">Saint Magadalene of Canossa</h3>
+    <h3 data-idioma="eng">Saint Magdalene of Canossa</h3>
     <h3 data-idioma="ita">Santa Maddalena di Canossa</h3>
 </div>
 <div id='conteudo'>
@@ -13,7 +13,7 @@
     </div>
     <div data-idioma="eng" id='conteudo-coluna-2'>
         <p>
-            <b>MAGDALENE GABRIELLA OF CANOSSA</b>
+            <b>MADDALENA GABRIELLA OF CANOSSA</b>
         </p>
         <p>
             Magdalene was born on march 1<sup>st</sup> 1774 in Verona, Italy.

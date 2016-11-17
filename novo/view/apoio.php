@@ -6,6 +6,13 @@
     <h3 data-idioma="eng">Change Someone's Reality</h3>
     <h3 data-idioma="ita">Transforma la Realtá di Qualcuno</h3>
 </div>
+<script>
+    $(document).ready(function () {
+        $("#conteudo-coluna-1").cycle({
+            speed: 200
+        });
+    });
+</script>
 <div id='conteudo'>
     <div id='conteudo-coluna-1'>
         <img src='img/parceiros/caritas.jpg'/>

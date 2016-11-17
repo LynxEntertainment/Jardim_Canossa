@@ -1,39 +1,31 @@
 <?php
-
-//session_save_path("/tmp");
 session_start();
+
 
 if (!isset($_SESSION["idioma"])) {
     $_SESSION["idioma"] = "por";
 }
-
 require_once 'model/trocaPagina.php';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <?php
-        if ($_SESSION["idioma"] == "por") {
-            echo "<title>ASSOCIAÇÃO MADALENA DE CANOSSA</title>";
-        } else if ($_SESSION["idioma"] == "eng") {
-            echo "<title>MADALENA DE CANOSSA ASSOCIATION</title>";
-        } else if ($_SESSION["idioma"] == "ita") {
-            echo "<title>ASSOCIAZIONE MADDALENA DI CANOSSA</title>";
-        }
-        ?>
-        <title>ASSOCIAÇÃO MADALENA DE CANOSSA</title>
+        <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="img/favicon.ico"/>
         <link rel="stylesheet" href="css/index.css"/>
         <link rel="stylesheet" href="css/jssor.css"/>
         <link rel="stylesheet" href="css/pagina.css"/>
+        <link rel="stylesheet" href="css/fotos.css"/>
         <link rel="stylesheet" href="css/fontfaces.css"/>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/fotos.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
+        <script src="js/jssor.slider-21.1.6.min.js" type="text/javascript"></script>
+        <script src="js/jquery.cycle2.js" type="text/javascript"></script>
         <script>
-            jQuery(document).ready(function () {
+            $(document).ready(function () {
 
                 $(window).click(function () {
                     encolherSeletorIdioma();
@@ -44,9 +36,16 @@ require_once 'model/trocaPagina.php';
                 });
 
                 atualizarIdioma();
+
             });
         </script>
+        <?php
+        if (!isset($_SESSION['idUsuario'])) {
+            echo "<style>.admin{display:none;}</style>";
+        }
+        ?>
         <!--Start of Tawk.to Script-->
+        <!--
         <script type="text/javascript">
             var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
             (function () {
@@ -68,95 +67,100 @@ require_once 'model/trocaPagina.php';
                         <img src="img/logo_jardim_canossa.png"/>
                     </a>
                 </div>
+                <?php
+                if (isset($_SESSION['idUsuario'])) {
+                    include 'view/admin/userbar.php';
+                }
+                ?>
                 <nav data-idioma="por">
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Quem somos</a>
                         <div class="sub-menu">
-                            <a href="?pagina=associacao">A associação</a>
-                            <a href="?pagina=jardim-canossa">Jardim Canossa</a>
-                            <a href="?pagina=espaco-vida">Espaço Vida</a>
-                            <a href="?pagina=obra-social">Obra Social M.C.</a>
-                            <a href="?pagina=madalena-de-canossa">Sta. Madalena de Canossa</a>
-                            <a href="?pagina=canossianas">Irmãs Canossianas</a>
-                            <a href="?pagina=rina-guarnieri">Irmã Rina Guarnieri</a>
-                            <a href="?pagina=colaboradores">Colaboradores</a>
-                            <a href="?pagina=objetivos">Objetivos Esperados</a>
+                            <a href="?view=associacao">A associação</a>
+                            <a href="?view=jardim-canossa">Jardim Canossa</a>
+                            <a href="?view=espaco-vida">Espaço Vida</a>
+                            <a href="?view=obra-social">Obra Social M.C.</a>
+                            <a href="?view=madalena-de-canossa">Sta. Madalena de Canossa</a>
+                            <a href="?view=canossianas">Irmãs Canossianas</a>
+                            <a href="?view=rina-guarnieri">Irmã Rina Guarnieri</a>
+                            <a href="?view=colaboradores">Colaboradores</a>
+                            <a href="?view=objetivos">Objetivos Esperados</a>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="?pagina=fotos">Fotos</a></div>
-                    <div class="menu-item"><a href="?pagina=apoio">Apoio</a></div>
+                    <div class="menu-item"><a href="?view=fotos">Fotos</a></div>
+                    <div class="menu-item"><a href="?view=apoio">Apoio</a></div>
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Colabore conosco</a>
                         <div class="sub-menu">
-                            <div class="sub-menu-item"><a href="?pagina=doe-jardim-canossa">Doe para o Jardim Canossa</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=doe-espaco-vida">Doe para o Espaço Vida</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=doe-obra-social">Doe para a Obra Social M.C.</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=apadrinhamento">Apadrinhamento</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-jardim-canossa">Doe para o Jardim Canossa</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-espaco-vida">Doe para o Espaço Vida</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-obra-social">Doe para a Obra Social M.C.</a></div>
+                            <div class="sub-menu-item"><a href="?view=apadrinhamento">Apadrinhamento</a></div>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="?pagina=contato">Contato</a></div>
+                    <div class="menu-item"><a href="?view=contato">Contato</a></div>
                 </nav>
                 <nav data-idioma="eng">
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Who we are</a>
                         <div class="sub-menu">
-                            <a href="?pagina=associacao">The Association</a>
-                            <a href="?pagina=jardim-canossa">Jardim Canossa</a>
-                            <a href="?pagina=espaco-vida">Espaço Vida</a>
-                            <a href="?pagina=obra-social">M.C. Social Work</a>
-                            <a href="?pagina=madalena-de-canossa">St. Magdalene of Canossa</a>
-                            <a href="?pagina=canossianas">Canossian Sisters</a>
-                            <a href="?pagina=rina-guarnieri">Sister Rina Guarnieri</a>
-                            <a href="?pagina=colaboradores">Collaborators</a>
-                            <a href="?pagina=objetivos">Expected Goals</a>
+                            <a href="?view=associacao">The Association</a>
+                            <a href="?view=jardim-canossa">Jardim Canossa</a>
+                            <a href="?view=espaco-vida">Espaço Vida</a>
+                            <a href="?view=obra-social">M.C. Social Work</a>
+                            <a href="?view=madalena-de-canossa">St. Magdalene of Canossa</a>
+                            <a href="?view=canossianas">Canossian Sisters</a>
+                            <a href="?view=rina-guarnieri">Sister Rina Guarnieri</a>
+                            <a href="?view=colaboradores">Collaborators</a>
+                            <a href="?view=objetivos">Expected Goals</a>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="?pagina=fotos">Photos</a></div>
-                    <div class="menu-item"><a href="?pagina=apoio">Support</a></div>
+                    <div class="menu-item"><a href="?view=fotos">Photos</a></div>
+                    <div class="menu-item"><a href="?view=apoio">Support</a></div>
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Collaborate with us</a>
                         <div class="sub-menu">
-                            <div class="sub-menu-item"><a href="?pagina=doe-jardim-canossa">Donate to Jardim Canossa</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=doe-espaco-vida">Donate to Espaço Vida</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=doe-obra-social">Donate to M.C. Social Work</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=apadrinhamento">Child Sponsorship</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-jardim-canossa">Donate to Jardim Canossa</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-espaco-vida">Donate to Espaço Vida</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-obra-social">Donate to M.C. Social Work</a></div>
+                            <div class="sub-menu-item"><a href="?view=apadrinhamento">Child Sponsorship</a></div>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="?pagina=contato">Contact</a></div>
+                    <div class="menu-item"><a href="?view=contato">Contact</a></div>
                 </nav>
                 <nav data-idioma="ita">
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Chi siamo</a>
                         <div class="sub-menu">
-                            <a href="?pagina=associacao">L´Associazione</a>
-                            <a href="?pagina=jardim-canossa">Jardim Canossa</a>
-                            <a href="?pagina=espaco-vida">Espaço Vida</a>
-                            <a href="?pagina=obra-social">Opera Sociale M.C.</a>
-                            <a href="?pagina=madalena-de-canossa">Sta. Maddalena di Canossa</a>
-                            <a href="?pagina=canossianas">Suore Canossiane</a>
-                            <a href="?pagina=rina-guarnieri">Suor Rina Guarnieri</a>
-                            <a href="?pagina=colaboradores">Collaboratori</a>
-                            <a href="?pagina=objetivos">Obietivi</a>
+                            <a href="?view=associacao">L´Associazione</a>
+                            <a href="?view=jardim-canossa">Jardim Canossa</a>
+                            <a href="?view=espaco-vida">Espaço Vida</a>
+                            <a href="?view=obra-social">Opera Sociale M.C.</a>
+                            <a href="?view=madalena-de-canossa">Sta. Maddalena di Canossa</a>
+                            <a href="?view=canossianas">Suore Canossiane</a>
+                            <a href="?view=rina-guarnieri">Suor Rina Guarnieri</a>
+                            <a href="?view=colaboradores">Collaboratori</a>
+                            <a href="?view=objetivos">Obietivi</a>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="?pagina=fotos">Fotografie</a></div>
-                    <div class="menu-item"><a href="?pagina=apoio">Supporto</a></div>
+                    <div class="menu-item"><a href="?view=fotos">Fotografie</a></div>
+                    <div class="menu-item"><a href="?view=apoio">Supporto</a></div>
                     <div class="menu-item" onmouseover="abrirDropdown(this)" onmouseout="fecharDropdown(this)">
                         <a class="dropdown-arrow" href="#">Collaborare con noi</a>
                         <div class="sub-menu">
-                            <div class="sub-menu-item"><a href="?pagina=doe-jardim-canossa">Donnare Jardim Canossa</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=doe-espaco-vida">Donnare Espaço Vida</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=doe-obra-social">Donnare all'Opera Sociale</a></div>
-                            <div class="sub-menu-item"><a href="?pagina=apadrinhamento">Adozione a distanza</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-jardim-canossa">Donnare Jardim Canossa</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-espaco-vida">Donnare Espaço Vida</a></div>
+                            <div class="sub-menu-item"><a href="?view=doe-obra-social">Donnare all'Opera Sociale</a></div>
+                            <div class="sub-menu-item"><a href="?view=apadrinhamento">Adozione a distanza</a></div>
                         </div>
                     </div>
-                    <div class="menu-item"><a href="?pagina=contato">Contatto</a></div>
+                    <div class="menu-item"><a href="?view=contato">Contatto</a></div>
                 </nav>
                 <div id="idioma">
                     <a class="trigger" href="#" onclick="expandirSeletorIdioma()"><img></a>
-                    <a class="opcao-idioma" href="#" onclick="atualizarIdioma('por')"><img src="img/icone-idioma-por.png"/></a>
-                    <a class="opcao-idioma" href="#" onclick="atualizarIdioma('eng')"><img src="img/icone-idioma-eng.png"/></a>
-                    <a class="opcao-idioma" href="#" onclick="atualizarIdioma('ita')"><img src="img/icone-idioma-ita.png"/></a>
+                    <a value="por" class="opcao-idioma" href="#" onclick="atualizarIdioma('por')"><img src="img/icone-idioma-por.png"/></a>
+                    <a value="eng" class="opcao-idioma" href="#" onclick="atualizarIdioma('eng')"><img src="img/icone-idioma-eng.png"/></a>
+                    <a value="ita" class="opcao-idioma" href="#" onclick="atualizarIdioma('ita')"><img src="img/icone-idioma-ita.png"/></a>
                 </div>
             </div>
         </header>

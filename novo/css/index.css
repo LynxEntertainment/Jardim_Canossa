@@ -10,6 +10,14 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+  text-decoration: underline;  
+}
+
+a:visited{
+    color: #000000;
+}
+
 .oculto{
     display: none;
 }
@@ -23,6 +31,18 @@ header{
     top: 0;
     left: 0;
     z-index: 500;
+}
+
+#userbar{
+    font-size: 0.83em;
+    position:absolute;
+    top: 2px;
+    right: 50px;
+    text-align: right;
+}
+
+#userbar p{
+    margin: 0;
 }
 
 #idioma{
@@ -106,6 +126,10 @@ nav a{
     font-size: 0.7em;
     line-height: 45px;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav a:hover{
     text-decoration: none;
 }
 

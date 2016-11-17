@@ -1,0 +1,172 @@
+.galeria-item-lista{
+    width: 300px;
+    margin: 15px;
+    float: left;
+    color: #000000;
+}
+
+.galeria-item-lista a{
+    display: block;
+    color: #000000;
+}
+
+.galeria-thumbs-lista img{
+    width:300px;
+}
+
+.galeria-titulo-lista{
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+}
+
+.galeria-data-lista{
+    width: 100%;
+    font-size: 0.8em;
+    color: #666666;
+}
+
+.icones-controle{
+    width:100%;
+    display: block;
+}
+.icones-controle img{
+    float: right;
+    width: 15px ;
+    height: 15px;
+}
+
+#galeria-exibir-titulo{
+    color:#6c9332;
+    width:100%;
+    float: left;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+#galeria-exibir-data{
+    width: 100%;
+    float:left;
+    text-align: center;
+}
+
+#galeria-exibir-foto{
+    width: 100%;
+}
+
+#galeria-exibir-foto img{
+    max-width: 100%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+}
+
+#galeria-exibir-descricao{
+    min-height: 100px;
+    margin: 10px;
+}
+
+.lnk-voltar{
+    position:absolute;
+    left:0;
+    display:block;
+    font-weight: 900;
+    padding: 5px 25px;
+    font-size:1.3em;
+    text-transform: uppercase;
+    background-image:url(../img/seta-voltar.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right; 
+    transition:600ms ease-out;
+    -webkit-text-stroke: 0.1px #ffffff;
+}
+
+.lnk-voltar:hover{
+    text-decoration: none;
+    background-position: left;
+    transition:200ms ease-out;
+}
+
+#galeria-exibir-controles{
+    position:absolute;
+    width: 100%;
+    top:50%;
+    transform: translateY(-50%);
+    height: 200px;
+    z-index: 1000;
+}
+
+#galeria-exibir-foto{
+    background:#000000;
+}
+
+#galeria-exibir-controles img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)!important;
+    width: 30px;
+}
+
+#btn-galeria-anterior{
+    position:absolute;
+    left: 0;
+    display:block;
+    height: 100%;
+    width: 150px;
+    transition: 300ms ease-out;
+}
+
+#btn-galeria-anterior img{
+    left: 0;
+    transform: translateX(-100%);
+    transition: 300ms ease-out;
+}
+
+#btn-galeria-anterior:hover{
+    transition: 300ms ease-out;
+    position:absolute;
+    left: 0;
+    display:block;
+    height: 100%;
+    width: 150px;
+    transition: 300ms ease-out;
+}
+
+#btn-galeria-anterior:hover img{
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 300ms ease-out;
+}
+
+#btn-galeria-proximo{
+    position:absolute;
+    right: 0;
+    display:block;
+    height: 100%;
+    width: 150px;
+    transition: 300ms ease-out;
+}
+
+#btn-galeria-proximo img{
+    right: 0;
+    transform: translateX(100%);
+    transition: 300ms ease-out;
+}
+
+#btn-galeria-proximo:hover{
+    transition: 300ms ease-out;
+    position:absolute;
+    proximo: 0;
+    display:block;
+    height: 100%;
+    width: 150px;
+    transition: 300ms ease-out;
+}
+
+#btn-galeria-proximo:hover img{
+    right: 50%;
+    transform: translateX(50%);
+    transition: 300ms ease-out;
+}
