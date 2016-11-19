@@ -118,8 +118,6 @@ class Galeria {
         
         $c = new Consulta($sql);
         
-        echo $sql;
-        
         if($c->executaConsulta()){
             return true;
         } else {

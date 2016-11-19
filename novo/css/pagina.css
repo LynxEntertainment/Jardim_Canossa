@@ -155,30 +155,35 @@
 }
 
 form{
-    color: #004c1e;
-}
-
-#form-contato{
+    float:left;
     margin: 40px;
     padding: 10px;
+    height:fit-content;
     background: rgba(0, 76, 30,0.1);
     border-radius: 5px;
 }
 
-#form-contato textarea{
-    border: none;
-    border-radius: 5px; 
-    height: 40px;
-    margin-bottom: 5px;
+form label{
+    float: left;
     width: 100%;
 }
 
-#form-login, #form-contato input[type="submit"]{
+form input, form textarea, form select{
+    width: calc(100% - 20px);
+    height: 25px;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px 0;
+    border-radius: 5px;
+}
+
+form input[type="submit"], form a{
+    width: 100%;
     color: #ffffff;
     font-weight: bold;
     background: #004c1e;
 }
-
-form-login, #form-contato input[type="submit"]:hover{
+form input[type="submit"]:hover, form a:hover{
+    text-decoration: none;
     background: #00240a;
 }

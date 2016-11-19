@@ -75,40 +75,45 @@ function listarGaleria(idioma, pagina, qtd) {
     getListaGaleria(idioma, pagina, qtd, function () {
         var dados = JSON.parse(this.responseText);
         var texto = "";
-        for (var i = 0; i < dados.galeria.length; i++) {
-            texto += '<div class="galeria-item-lista">'
-                    + '<div class="galeria-item-lista">'
-                    + '<a href="?view=fotos&galeria=exibir&id=' + dados.galeria[i].id_galeria + '">'
-                    + '<div class="galeria-titulo-lista">' + dados.galeria[i].titulo_galeria + '</div>'
-                    + '<div class="galeria-thumbs-lista">';
-            for (var j = 0; j < dados.galeria[i].foto_galeria.length || j < 5; j++) {
-                texto += '<img src="' + dados.galeria[i].foto_galeria[j].caminho_foto + '"/>';
+        if (dados.galeria.length > 0) {
+            for (var i = 0; i < dados.galeria.length; i++) {
+                texto += '<div class="galeria-item-lista">'
+                        + '<div class="galeria-item-lista">'
+                        + '<a href="?view=fotos&galeria=exibir&id=' + dados.galeria[i].id_galeria + '">'
+                        + '<div class="galeria-titulo-lista">' + dados.galeria[i].titulo_galeria + '</div>'
+                        + '<div class="galeria-thumbs-lista">';
+                for (var j = 0; j < dados.galeria[i].foto_galeria.length || j < 5; j++) {
+                    texto += '<img src="' + dados.galeria[i].foto_galeria[j].caminho_foto + '"/>';
+                }
+                texto += '</div>'
+                        + '<div class="galeria-data-lista">'
+                        + dados.galeria[i].data_galeria
+                        + '</div>'
+                        + '</a>'
+                        + '<div class="icones-controle admin">'
+                        + '<a href="?view=fotos&amp;galeria=editar&amp;id=' + dados.galeria[i].id_galeria + '">'
+                        + '<img src="img/edit-icon.png">'
+                        + '</a>'
+                        + '<a href="#" onclick="excluirGaleria(' + dados.galeria[i].id_galeria + ')">'
+                        + '<img src="img/delete-icon.png">'
+                        + '</a>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>';
             }
-            texto += '</div>'
-                    + '<div class="galeria-data-lista">'
-                    + dados.galeria[i].data_galeria
-                    + '</div>'
-                    + '</a>'
-                    + '<div class="icones-controle admin">'
-                    + '<a href="?view=fotos&amp;galeria=editar&amp;id=' + dados.galeria[i].id_galeria + '">'
-                    + '<img src="img/edit-icon.png">'
-                    + '</a>'
-                    + '<a href="#" onclick="excluirGaleria(' + dados.galeria[i].id_galeria + ')">'
-                    + '<img src="img/delete-icon.png">'
-                    + '</a>'
-                    + '</div>'
-                    + '</div>'
-                    + '</div>';
+
+            $("#galeria-lista").html(texto);
+
+            $(".galeria-thumbs-lista").cycle({
+                timeout: 2000,
+                speed: 300,
+                fx: "scrollHorz"
+            });
+        } else {
+            $("#galeria-lista").html("Nenhuma galeria a ser exibida");
         }
-
-        $("#galeria-lista").html(texto);
-
-        $(".galeria-thumbs-lista").cycle({
-            timeout: 2000,
-            speed: 300,
-            fx: "scrollHorz"
-        });
     });
+
 }
 
 function inserirGaleria() {
@@ -119,6 +124,8 @@ function inserirGaleria() {
             pasta: tmp_pasta
         },
         success: function (data) {
+            $("#id-galeria").val(data);
+            inserirGaleriaIdioma($('#form-inserir-galeria').serializeArray());
             window.location = "index.php?view=fotos&galeria=editar&id=" + data;
         },
         error: function (data) {
@@ -160,7 +167,7 @@ function inserirGaleriaIdioma(form) {
             descricao_galeria: form[4].value
         },
         success: function (data) {
-            console.log(data);
+            window.alert(data);
         },
         error: function (data) {
             var msg_erro = JSON.parse(data.responseText).mensagem;

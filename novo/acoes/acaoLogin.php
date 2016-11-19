@@ -16,5 +16,5 @@ $uc = new UsuarioController();
         echo "<script>window.location = '../index.php'</script>";
     } else {
         echo "<script>window.alert('Login ou senha incorretos.');</script>";
-        echo "<script>window.location = '../index.php?pagina=login'</script>";
+        echo "<script>window.location = '../index.php?view=admin'</script>";
     }

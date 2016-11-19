@@ -178,3 +178,31 @@
 .form-alerta{
     color: #FF0000;
 }
+
+.lnk-acao{
+    float: left;
+    color: #ffffff;
+    padding: 5px 0;
+    text-align: center;
+    display: block;
+    background: #004c1e;
+    border-radius: 5px;
+}
+
+.lnk-acao:hover{
+    background: #00240a;
+    text-decoration: none;
+}
+
+#upload-fotos{
+    float: left;
+    width: 450px;
+    margin: 0 25px;
+}
+
+#form-inserir-galeria{
+    width: 450px;
+    margin: 0 25px;
+    float: left;
+}
+
