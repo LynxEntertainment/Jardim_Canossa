@@ -10,6 +10,11 @@ class Galeria {
     private $descricaoGaleria;
     private $dataGaleria;
     private $idiomaGaleria;
+    const idioma = array(
+        "por" => 1,
+        "eng" => 2,
+        "ita" => 3
+    );
 
     function __construct() {
         
@@ -72,15 +77,14 @@ class Galeria {
     }
     
     private function getLastIdGaleria(){
-        $sql = "SELECT id_galeria FROM galeria"
-                . "ORDER BY id_galeria"
+        $sql = "SELECT id_galeria FROM galeria "
+                . "ORDER BY id_galeria DESC "
                 . "LIMIT 1";
         
         $c = new Consulta($sql);
-        
         $result = $c->executaConsulta();
         
-        if(!empty($result) && $retorno->rowCount()){
+        if(!empty($result) && $result->rowCount()){
             foreach($result as $row){
                 $this->idGaleria = $row['id_galeria'];
             }
@@ -101,12 +105,6 @@ class Galeria {
     }
     
     public function inserirGaleriaIdioma(){
-        $idioma = array(
-            "por" => 1,
-            "eng" => 2,
-            "ita" => 3
-        );
-        
         $sql = "INSERT INTO galeria_idioma("
                 . "FK_galeria,"
                 . "FK_idioma,"
@@ -114,16 +112,46 @@ class Galeria {
                 . "descricao_galeria) "
                 . "VALUES ("
                 . "'".$this->idGaleria."',"
-                . "'".$idioma[$this->idiomaGaleria]."',"
+                . "'". Galeria::idioma[$this->idiomaGaleria]."',"
                 . "'".$this->tituloGaleria."',"
-                . "'".$this->descricaoGaleria.")";
+                . "'".$this->descricaoGaleria."')";
         
         $c = new Consulta($sql);
+        
+        echo $sql;
         
         if($c->executaConsulta()){
             return true;
         } else {
             return false;
+        }
+    }
+    
+    public function editarGaleriaIdioma(){
+        $sql = "UPDATE galeria_idioma "
+                . "SET titulo_galeria = '".$this->tituloGaleria."', "
+                . " descricao_galeria = '".$this->descricaoGaleria."' "
+                . "WHERE FK_galeria = '".$this->idGaleria."' "
+                . "AND FK_idioma = '".Galeria::idioma[$this->idiomaGaleria]."'";
+        
+        $c = new Consulta($sql);
+        
+        
+        if($c->executaConsulta()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public function excluirGaleria($id){
+        $sql = "DELETE FROM galeria "
+                . "WHERE id_galeria = '".$id."'";
+        
+        $c = new Consulta($sql);
+        
+        if($c->executaConsulta()){
+            return true;
         }
     }
 

@@ -7,7 +7,7 @@ class fotoController {
     private $foto;
     
     function __construct() {
-        
+        $this->foto = new Foto();
     }
 
     function getFoto() {
@@ -16,6 +16,17 @@ class fotoController {
 
     function setFoto($foto) {
         $this->foto = $foto;
+    }
+    
+    function inserirFoto($galeria,$caminho){
+        $this->foto->setFKGaleria($galeria);
+        $this->foto->setCaminhoFoto($caminho);
+        
+        if($this->foto->inserirFoto()){
+            return true;
+        } else {
+            return false;
+        }
     }
     
     public static function listarFotos($galeria){

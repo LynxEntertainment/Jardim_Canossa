@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Consulta.php';
-require_once 'model/Consulta.php';
+require_once '../model/Consulta.php';
 
 class Usuario {
 

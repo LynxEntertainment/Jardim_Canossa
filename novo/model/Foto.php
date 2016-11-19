@@ -9,8 +9,8 @@ class Foto {
     private $FKGaleria;
     private $caminhoFoto;
 
-    function __construct($FKGaleria) {
-        $this->FKGaleria = $FKGaleria;
+    function __construct() {
+        
     }
 
     function getIdFoto() {

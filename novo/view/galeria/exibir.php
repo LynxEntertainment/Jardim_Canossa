@@ -2,11 +2,11 @@
 
     $(document).ready(function () {
         getIdioma(function () {
-            exibirGaleria(<?php echo $_GET['id']; ?>, this.responseText);
+            exibirGaleria($_GET['id'], this.responseText);
         });
 
         $(".opcao-idioma").click(function () {
-            exibirGaleria(<?php echo $_GET['id']; ?>, $(this).attr("value"));
+            exibirGaleria($_GET['id'], $(this).attr("value"));
             location.reload();
         });
     });

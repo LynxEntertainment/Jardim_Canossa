@@ -165,7 +165,7 @@ form{
     border-radius: 5px;
 }
 
-input, #form-contato textarea{
+#form-contato textarea{
     border: none;
     border-radius: 5px; 
     height: 40px;
@@ -173,12 +173,12 @@ input, #form-contato textarea{
     width: 100%;
 }
 
-input[type="submit"]{
+#form-login, #form-contato input[type="submit"]{
     color: #ffffff;
     font-weight: bold;
     background: #004c1e;
 }
 
-input[type="submit"]:hover{
+form-login, #form-contato input[type="submit"]:hover{
     background: #00240a;
 }

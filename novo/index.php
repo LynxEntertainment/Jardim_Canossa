@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+error_reporting(E_ERROR);
+
 
 if (!isset($_SESSION["idioma"])) {
     $_SESSION["idioma"] = "por";
@@ -19,13 +21,26 @@ require_once 'model/trocaPagina.php';
         <link rel="stylesheet" href="css/pagina.css"/>
         <link rel="stylesheet" href="css/fotos.css"/>
         <link rel="stylesheet" href="css/fontfaces.css"/>
+        <link rel="stylesheet" href="css/themes/jquery.filer-dragdropbox-theme.css"/>
+        <link rel="stylesheet" href="css/jquery.filer.css"/>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/fotos.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script src="js/jssor.slider-21.1.6.min.js" type="text/javascript"></script>
         <script src="js/jquery.cycle2.js" type="text/javascript"></script>
+        <script src="js/jquery.filer.min.js" type="text/javascript"></script>
         <script>
+            var $_GET = {};
+            
             $(document).ready(function () {
+
+                document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+                    function decode(s) {
+                        return decodeURIComponent(s.split("+").join(" "));
+                    }
+
+                    $_GET[decode(arguments[1])] = decode(arguments[2]);
+                });
 
                 $(window).click(function () {
                     encolherSeletorIdioma();

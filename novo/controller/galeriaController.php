@@ -19,13 +19,11 @@ class galeriaController {
         $this->galeria = $galeria;
     }
     
-    public function inserirGaleria(){
-        $this->galeria = new Galeria();
-        
-        $this->galeria->setIdGaleria($this->galeria->inserirGaleria());
+    public function inserirGaleria(){        
+        $this->galeria->inserirGaleria();
         
         if($this->galeria->getIdGaleria()){
-            return true;
+            return $this->galeria->getIdGaleria();
         } else {
             return false;
         }
@@ -33,12 +31,33 @@ class galeriaController {
     
     public function inserirGaleriaIdioma($titulo,$descricao,$idioma){
         $this->galeria->setTituloGaleria($titulo);
-        $this->galeria->setDescricaoGaleria($titulo);
+        $this->galeria->setDescricaoGaleria($descricao);
         $this->galeria->setIdiomaGaleria($idioma);
         
         if($this->galeria->inserirGaleriaIdioma()){
             return true;
         } else{
+            return false;
+        }
+    }
+    
+    public function editarGaleriaIdioma($id,$idioma,$titulo,$descricao){
+        $this->galeria->setIdGaleria($id);
+        $this->galeria->setIdiomaGaleria($idioma);
+        $this->galeria->setTituloGaleria($titulo);
+        $this->galeria->setDescricaoGaleria($descricao);
+        
+        if($this->galeria->editarGaleriaIdioma()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public function excluirGaleria($id){
+        if($this->galeria->excluirGaleria($id)){
+            return true;
+        } else {
             return false;
         }
     }

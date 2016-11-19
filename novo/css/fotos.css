@@ -170,3 +170,11 @@
     transform: translateX(50%);
     transition: 300ms ease-out;
 }
+
+#editar-galeria-fotos img{
+    border-radius: 0 !important;
+}
+
+.form-alerta{
+    color: #FF0000;
+}
