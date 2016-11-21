@@ -6,7 +6,7 @@
 </div>
 <div id='conteudo'>
     <div id='conteudo-coluna-1'>
-        <img src="img/espaco-jardim-canossa.jpg">
+        <a href="index.php?view=fotos"><img src="img/espaco-jardim-canossa.jpg"></a>
     </div>
     <div data-idioma="por" id="conteudo-coluna-2">
         <p>

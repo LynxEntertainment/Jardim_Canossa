@@ -83,7 +83,9 @@ function listarGaleria(idioma, pagina, qtd) {
                         + '<div class="galeria-titulo-lista">' + dados.galeria[i].titulo_galeria + '</div>'
                         + '<div class="galeria-thumbs-lista">';
                 for (var j = 0; j < dados.galeria[i].foto_galeria.length || j < 5; j++) {
-                    texto += '<img src="' + dados.galeria[i].foto_galeria[j].caminho_foto + '"/>';
+                    if (dados.galeria[i].foto_galeria[j] != null) {
+                        texto += '<img src="' + dados.galeria[i].foto_galeria[j].caminho_foto + '"/>';
+                    }
                 }
                 texto += '</div>'
                         + '<div class="galeria-data-lista">'
@@ -147,6 +149,7 @@ function criarFormGaleriaIdioma(id, idioma) {
         } else {
             $("#titulo-galeria").val("");
             $("#descricao-galeria").val("");
+            $("#definido").val("false");
             $("#titulo-galeria").attr("placeholder", "Idioma ainda não adicionado");
             $("#descricao-galeria").attr("placeholder", "Idioma ainda não adicionado");
             $("#btn-atualizar-galeria").html("Adicionar");

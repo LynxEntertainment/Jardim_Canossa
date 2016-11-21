@@ -20,8 +20,6 @@
         <img src='img/parceiros/companhia-da-alegria.jpg'/>
         <img src='img/parceiros/faem.jpg'/>
         <img src='img/parceiros/gruppo_india.jpg'/>
-        <img src='img/parceiros/imperatriz.jpg'/>
-        <img src='img/parceiros/pastoral_da_crianca.jpg'/>
     </div>
     <div data-idioma="por" id='conteudo-coluna-2'>
         <p>

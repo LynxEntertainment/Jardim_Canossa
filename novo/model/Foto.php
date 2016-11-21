@@ -41,13 +41,13 @@ class Foto {
         $sql = "INSERT INTO foto ("
                 . "FK_galeria,"
                 . "caminho_foto) "
-                . "VALUES ("
-                . "'".$this->FKGaleria."',"
-                . "'".$this->caminhoFoto."')";
+                . "VALUES (? ,?)";
         
         $c = new Consulta($sql);
         
-        if($c->executaConsulta()){
+        $dados = array($this->FKGaleria,$this->caminhoFoto);
+        
+        if($c->executaConsulta($dados)){
             return true;
         } else {
             return false;
@@ -55,11 +55,13 @@ class Foto {
     }
     
     public static function listarFoto($galeria) {
-        $sql = "SELECT * FROM foto WHERE FK_galeria = '".$galeria."' ";
+        $sql = "SELECT * FROM foto WHERE FK_galeria = ? ";
         
         $c = new Consulta($sql);
         
-        $retorno = $c->executaConsulta();
+        $dados = array($galeria);
+        
+        $retorno = $c->executaConsulta($dados);
         
         if(!empty($retorno) && $retorno->rowCount() > 0){
             return $retorno;

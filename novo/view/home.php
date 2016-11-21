@@ -7,7 +7,7 @@
             para o Bairro Parque Santa Lúcia, periferia de Imperatriz
             e iniciou um trabalho...
         </p>
-        <a href="?pagina=jardim-canossa">Saiba Mais</a>
+        <a href="?view=jardim-canossa">Saiba Mais</a>
     </div>
     <div data-idioma="eng" class="home-destaque">
         <h1>Jardim Canossa</h1>
@@ -17,7 +17,7 @@
             to Parque Santa Lúcia district, outskirts of Imperatriz and bugun a 
             work aimed at...
         </p>
-        <a href="?pagina=jardim-canossa">Learn More</a>
+        <a href="?view=jardim-canossa">Learn More</a>
     </div>
     <div data-idioma="ita" class="home-destaque">
         <h1>Jardim Canossa</h1>
@@ -27,6 +27,6 @@
             cambiarono residenza e furono nel quartiere Santa Lucia,
             periferia di Imperatriz e iniziarono  un lavoro rivolto alla..
         </p>
-        <a href="?pagina=jardim-canossa">Maggiori Informazioni</a>
+        <a href="?view=jardim-canossa">Maggiori Informazioni</a>
     </div>
 </div>

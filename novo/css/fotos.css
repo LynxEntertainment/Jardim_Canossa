@@ -206,3 +206,23 @@
     float: left;
 }
 
+.btn-upload{
+    float: left;
+    color: #ffffff !important;
+    margin: 10px;
+    font-weight: bold;
+    display: block;
+    background: #004c1e;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-upload img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+.btn-upload:hover{
+    text-decoration: none;
+    background: #00240a;
+}

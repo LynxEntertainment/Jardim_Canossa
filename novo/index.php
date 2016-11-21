@@ -235,8 +235,6 @@ require_once 'model/trocaPagina.php';
                         <div><img data-u="image" src="img/parceiros/cata-ventos.jpg" /></div>
                         <div><a href="https://www.facebook.com/pages/Faem-Federa%C3%A7%C3%A3o-De-Automobilismo-Do-Estado-Do-Maranh%C3%A3o/423132381134079?fref=ts" target="_blank"><img data-u="image" src="img/parceiros/faem.jpg" /></a></div>
                         <div><a href="http://www.gruppoindia.it/" target="_blank"><img data-u="image" src="img/parceiros/gruppo_india.jpg" /></a></div>
-                        <div><img data-u="image" src="img/parceiros/imperatriz.jpg" /></div>
-                        <div><img data-u="image" src="img/parceiros/pastoral_da_crianca.jpg" /></div>
                         <div><img data-u="image" src="img/parceiros/companhia-da-alegria.jpg" /></div>
                     </div>
                 </div>

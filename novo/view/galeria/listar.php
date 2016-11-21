@@ -10,8 +10,8 @@
     });
 
 </script>
+<a class="admin btn-upload" href="index.php?view=fotos&galeria=inserir"><img src=img/upload-icon.png>Inserir Nova galeria</a>
 <div id="conteudo">
-    <a class="admin" href="index.php?view=fotos&galeria=inserir">Inserir Nova galeria</a>
     <div id="galeria-lista">
     </div>
 </div>

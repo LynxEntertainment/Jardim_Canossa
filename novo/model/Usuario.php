@@ -65,13 +65,15 @@ class Usuario {
 
     function editarUsuario($nome, $sobrenome, $senha) {
         $sql = "UPDATE usuario SET "
-                . "nome_usuario = '" . $nome . "',"
-                . "sobrenome_usuario = '" . $sobrenome . "',"
-                . "WHERE id_usuario = '" . $this->idUsuario . "'";
+                . "nome_usuario =  ?,"
+                . "sobrenome_usuario = ?,"
+                . "WHERE id_usuario = ?";
+        
+        $dados = array($nome,$sobrenome,$this->idUsuario);
 
         $c = new Consulta($sql);
 
-        if ($c->executaConsulta()) {
+        if ($c->executaConsulta($dados)) {
             $this->nomeUsuario = $nome;
             $this->sobrenomeUsuario = $sobrenome;
 
@@ -83,12 +85,14 @@ class Usuario {
 
     public function alterarSenha($senha) {
         $sql = "UPDATE usuario SET "
-                . "senha_usuario = '" . md5($senha) . "'"
-                . "WHERE id_usuario = '" . $this->idUsuario . "'";
+                . "senha_usuario = ? "
+                . "WHERE id_usuario = ?";
 
         $c = new Consulta($sql);
+        
+        $dados = array(md5($senha),$this->idUsuario);
 
-        if ($c->executaConsulta()) {
+        if ($c->executaConsulta($dados)) {
             return true;
         } else {
             return false;
@@ -97,12 +101,14 @@ class Usuario {
 
     public function realizarLogin($login, $senha) {
         $sql = "SELECT * FROM usuario "
-                . "WHERE login_usuario = '" . $login . "' "
-                . "AND senha_usuario = '" . md5($senha) . "'";
+                . "WHERE login_usuario = ? "
+                . "AND senha_usuario = ? ";
 
         $c = new Consulta($sql);
+        
+        $dados = array($login,md5($senha));
 
-        $retorno = $c->executaConsulta();
+        $retorno = $c->executaConsulta($dados);
 
         if ($retorno->rowCount() > 0) {
             return $retorno;

@@ -62,12 +62,14 @@ class Galeria {
     
     public function selecionarGaleria(){
         $sql = "SELECT * FROM galeria_join "
-                . "WHERE id_galeria = ".$this->idGaleria." "
-                . "AND idioma_galeria = '".$this->idiomaGaleria."'";
+                . "WHERE id_galeria = ? "
+                . "AND idioma_galeria = ? ";
+        
+        $dados = array($this->idGaleria, $this->idiomaGaleria);
         
         $c = new Consulta($sql);
         
-        $retorno = $c->executaConsulta();
+        $retorno = $c->executaConsulta($dados);
         
         if(!empty($retorno) && $retorno->rowCount()){
             return $retorno;
@@ -82,7 +84,7 @@ class Galeria {
                 . "LIMIT 1";
         
         $c = new Consulta($sql);
-        $result = $c->executaConsulta();
+        $result = $c->executaConsulta(NULL);
         
         if(!empty($result) && $result->rowCount()){
             foreach($result as $row){
@@ -96,7 +98,7 @@ class Galeria {
         
         $c = new Consulta($sql);
                 
-        if($c->executaConsulta()){
+        if($c->executaConsulta(NULL)){
             $this->getLastIdGaleria();
             return true;
         } else {
@@ -110,15 +112,18 @@ class Galeria {
                 . "FK_idioma,"
                 . "titulo_galeria,"
                 . "descricao_galeria) "
-                . "VALUES ("
-                . "'".$this->idGaleria."',"
-                . "'". Galeria::idioma[$this->idiomaGaleria]."',"
-                . "'".$this->tituloGaleria."',"
-                . "'".$this->descricaoGaleria."')";
+                . "VALUES (?, ?, ?, ?)";
+        
+        $dados = array(
+            $this->idGaleria,
+            Galeria::idioma[$this->idiomaGaleria],
+            $this->tituloGaleria,
+            $this->descricaoGaleria);
         
         $c = new Consulta($sql);
         
-        if($c->executaConsulta()){
+        
+        if($c->executaConsulta($dados)){
             return true;
         } else {
             return false;
@@ -127,15 +132,21 @@ class Galeria {
     
     public function editarGaleriaIdioma(){
         $sql = "UPDATE galeria_idioma "
-                . "SET titulo_galeria = '".$this->tituloGaleria."', "
-                . " descricao_galeria = '".$this->descricaoGaleria."' "
-                . "WHERE FK_galeria = '".$this->idGaleria."' "
-                . "AND FK_idioma = '".Galeria::idioma[$this->idiomaGaleria]."'";
+                . "SET titulo_galeria = ?, "
+                . " descricao_galeria = ? "
+                . "WHERE FK_galeria = ? "
+                . "AND FK_idioma = ?";
         
         $c = new Consulta($sql);
         
+        $dados = array(
+            $this->tituloGaleria,
+            $this->descricaoGaleria,
+            $this->idGaleria,
+            Galeria::idioma[$this->idiomaGaleria]
+        );
         
-        if($c->executaConsulta()){
+        if($c->executaConsulta($dados)){
             return true;
         } else {
             return false;
@@ -144,22 +155,24 @@ class Galeria {
     
     public function excluirGaleria($id){
         $sql = "DELETE FROM galeria "
-                . "WHERE id_galeria = '".$id."'";
+                . "WHERE id_galeria = ?";
         
         $c = new Consulta($sql);
         
-        if($c->executaConsulta()){
+        $dados = array($id);
+        
+        if($c->executaConsulta($dados)){
             return true;
         }
     }
 
     public static function listarGalerias($idioma, $pagina, $qtd) {
-        $sql = "SELECT * FROM galeria_join "
-                . "WHERE idioma_galeria = '".$idioma."' "
-                . "LIMIT ".($pagina-1)*$qtd.", ".$qtd."";
+        $sql = "SELECT * FROM galeria_join WHERE idioma_galeria = ? LIMIT ? , ?";
         $c = new Consulta($sql);
+        
+        $dados = array($idioma,(int)($pagina-1)*$qtd,(int)$qtd);
 
-        $retorno = $c->executaConsulta();
+        $retorno = $c->executaConsulta($dados);
         if (!empty($retorno) && $retorno->rowCount()) {
             return $retorno;
         } else {
