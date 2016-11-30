@@ -8,7 +8,7 @@
 </div>
 <div id='conteudo'>
     <div id='conteudo-coluna-1'>
-        <iframe width="480" height="320" src="https://www.youtube.com/embed/3R342kvxBDk" frameborder="0" allowfullscreen></iframe>
+        <img src="img/irmas.jpg"/>
     </div>
     <div data-idioma="por" id='conteudo-coluna-2'>
         <p>

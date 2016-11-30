@@ -31,7 +31,7 @@ require_once 'model/trocaPagina.php';
         <script src="js/jquery.filer.min.js" type="text/javascript"></script>
         <script>
             var $_GET = {};
-            
+
             $(document).ready(function () {
 
                 document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
@@ -60,7 +60,6 @@ require_once 'model/trocaPagina.php';
         }
         ?>
         <!--Start of Tawk.to Script-->
-        <!--
         <script type="text/javascript">
             var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
             (function () {
@@ -241,73 +240,58 @@ require_once 'model/trocaPagina.php';
                 <!-- #endregion Jssor Slider End -->
             </div>
             <div id="bar-rodape"></div>
-            <div data-idioma="por" id="rodape">
-                <div class="coluna-rodape">
-                    <h1>Links Úteis</h1>
-                    <a href="http://w2.vatican.va/content/vatican/pt.html" target="_blank">Vaticano</a><br>
-                    <a href="http://www.cnbb.org.br/" target="_blank">CNBB</a><br>
-                    <a href="http://www.dioceseitz.blogspot.com.br/" target="_blank">Diocese de Imperatriz</a><br>
-                    <a href="http://www.canossian.org/en/" target="_blank">Irmãs Canossianas</a><br>
-                    <a href="https://www.pastoraldacrianca.org.br/" target="_blank">Pastoral da Criança</a><br>
-                    <a href="http://www.voica.org/wordpress/?page_id=1034" target="_blank">Voica Onlus</a><br>
-                    <a href="http://www.fondazionecanossiana.org/en/" target="_blank">Fundação Canossiana</a><br>
-                    <a href="http://canossianos.org.br/" target="_blank">Padres e Irmãos Canossianos</a><br>
-                    <a href="http://www.laicican.org/" target="_blank">Leigos Canossianos</a><br>
+            <div id="rodape">
+                <div id="rodape-info">
+                    <table>
+                        <tr>
+                            <th colspan="3">Links Úteis</th>
+                        </tr>
+                        <tr>
+                            <td><a href="http://w2.vatican.va/content/vatican/pt.html">Vaticano</a></td>
+                            <td><a href="http://www.cnbb.org.br/">CNBB</a></td>
+                            <td><a href="http://www.dioceseitz.blogspot.com.br/">Diocese de Imperatriz</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.canossian.org/en/">Irmãs Canossianas</a></td>
+                            <td><a href="https://www.pastoraldacrianca.org.br/">Pastoral da Criança</a></td>
+                            <td><a href="http://www.voica.org/wordpress/?page_id=1034">Voica Onlus</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.fondazionecanossiana.org/en/">Fundação Canossiana</a></td>
+                            <td><a href="http://canossianos.org.br/">Padres e Irmãos Canossianos</a></td>
+                            <td><a href="http://www.laicican.org/">Leigos Canossianos</a></td>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="2">Contato</th>
+                        </tr>
+                        <tr>
+                            <td>(99) 3526-7697</td>
+                            <td rowspan="3"><a href="mailto:amcjardimcanossa@gmail.com">amcjardimcanossa@gmail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>(99) 3527-5274</td>
+                        </tr>
+                        <tr>
+                            <td>(99) 99192-2021</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Estamos aqui ó:</th>
+                        </tr>
+                        <tr>
+                            <td>Rua São Francisco, nº 53 - Vila São Francisco</td>
+                        </tr>
+                        <tr>
+                            <td>Imperatriz - MA</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="coluna-rodape">
-                    <h1><a href="#">Contato</a></h1>
-                    <p>Tel: (99) 3526-7697 / 99192-2021<br>
-                        Tel2: (99) 3527-5274<br>
-                        <a href="mailto:amcjardimcanossa@gmail.com">amcjardimcanossa@gmail.com</a></p>
-                    <h1>Estamos Aqui ó:</h1>
-                    <p>Rua São Francisco, nº 53 - Vila São Francisco<br>
-                        Imperatriz - MA</p>
-                </div>
-            </div>
-            <div data-idioma="eng" id="rodape">
-                <div class="coluna-rodape">
-                    <h1>Useful Links</h1>
-                    <a href="http://w2.vatican.va/content/vatican/pt.html" target="_blank">Vatican</a><br>
-                    <a href="http://www.cnbb.org.br/" target="_blank">CNBB</a><br>
-                    <a href="http://www.dioceseitz.blogspot.com.br/" target="_blank">Diocese of Imperatriz</a><br>
-                    <a href="http://www.canossian.org/en/" target="_blank">Canossian Sisters</a><br>
-                    <a href="https://www.pastoraldacrianca.org.br/" target="_blank">Pastoral da Criança</a><br>
-                    <a href="http://www.voica.org/wordpress/?page_id=1034" target="_blank">Voica Onlus</a><br>
-                    <a href="http://www.fondazionecanossiana.org/en/" target="_blank">Canossian Foundation</a><br>
-                    <a href="http://canossianos.org.br/" target="_blank">Canossian Brothers and Fathers</a><br>
-                    <a href="http://www.laicican.org/" target="_blank">Canossian Lay People</a><br>
-                </div>
-                <div class="coluna-rodape">
-                    <h1><a href="#">Contact</a></h1>
-                    <p>Tel: (99) 3526-7697 / 99192-2021<br>
-                        Tel2: (99) 3527-5274<br>
-                        <a href="mailto:amcjardimcanossa@gmail.com">amcjardimcanossa@gmail.com</a></p>
-                    <h1>We're right here:</h1>
-                    <p>Rua São Francisco, nº 53 - Vila São Francisco<br>
-                        Imperatriz - MA</p>
-                </div>
-            </div>
-            <div data-idioma="ita" id="rodape">
-                <div class="coluna-rodape">
-                    <h1>Link Utile</h1>
-                    <a href="http://w2.vatican.va/content/vatican/pt.html" target="_blank">Vaticano</a><br>
-                    <a href="http://www.cnbb.org.br/" target="_blank">CNBB</a><br>
-                    <a href="http://www.dioceseitz.blogspot.com.br/" target="_blank">Diocesi di Imperatriz</a><br>
-                    <a href="http://www.canossian.org/en/" target="_blank">Suore Canossiani</a><br>
-                    <a href="https://www.pastoraldacrianca.org.br/" target="_blank">Pastoral da Criança</a><br>
-                    <a href="http://www.voica.org/wordpress/?page_id=1034" target="_blank">Voica Onlus</a><br>
-                    <a href="http://www.fondazionecanossiana.org/en/" target="_blank">Fondazione Canossiana</a><br>
-                    <a href="http://canossianos.org.br/" target="_blank">Padri e Fratelli Canossiana</a><br>
-                    <a href="http://www.laicican.org/" target="_blank">Laico Canossiano</a><br>
-                </div>
-                <div class="coluna-rodape">
-                    <h1><a href="#">Contatto</a></h1>
-                    <p>Tel: (99) 3526-7697 / 99192-2021<br>
-                        Tel2: (99) 3527-5274<br>
-                        <a href="mailto:amcjardimcanossa@gmail.com">amcjardimcanossa@gmail.com</a></p>
-                    <h1>Noi siamo qui:</h1>
-                    <p>Rua São Francisco, nº 53 - Vila São Francisco<br>
-                        Imperatriz - MA</p>
+                <div id="rodape-redes-sociais">
+                    <a href="https://www.facebook.com/amcjardimcanossa/" target="_blank"><img src="img/facebook-bt.png"/></a>
+                    <a href="#"><img src="img/instagram-bt.png"/></a>
+                    <a href="https://www.youtube.com/channel/UCwtJ5niu2FZYAWTyZZO3h7A" target="_blank"><img src="img/youtube-bt.png"/></a>
                 </div>
             </div>
         </footer>

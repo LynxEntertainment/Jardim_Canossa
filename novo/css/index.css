@@ -11,7 +11,7 @@ a{
 }
 
 a:hover{
-  text-decoration: underline;  
+    text-decoration: underline;  
 }
 
 a:visited{
@@ -221,28 +221,10 @@ footer{
 }
 
 #rodape{
-    width: 960px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-
-.coluna-rodape{
-    border-left: 1px solid #2e5128;
-    margin: 10px 0px;
-    padding: 0 9.5px;
-    float: left;
-    width: 300px;
-    height: 200px;
-}
-
-.coluna-rodape:first-child{
-    border: none;
-}
-
-#rodape{
     line-height: 1.5em;
     font-size: 0.8em;
     color: #ffffff;
+    font-weight: normal;
 }
 
 #rodape a{
@@ -254,13 +236,41 @@ footer{
     text-decoration: underline;
 }
 
-#rodape h1{
-    color:#3e6d35;
-    font-size:1em;
-    text-transform: uppercase;
-    font-weight: 900;
+#rodape-info{
+    margin-left: 50%;
+    padding: 10px 0;
+    width: 1000px;
+    transform:translateX(-50%);
+    float: left;
 }
 
-#rodape h1 a{
-    color:#3e6d35;
+#rodape-info table{
+    border-left: 1px solid #4da500;
+    float: left;
+    height: 70px;
+}
+
+#rodape-info table:first-child{
+    border: none;
+}
+
+#rodape-info table th{
+    font-size: 1em;
+    text-transform: uppercase;
+    color:#4da500;
+}
+
+#rodape-info table td{
+    line-height: 1em;
+    font-size: 0.997em;
+    margin: 0;
+    padding: 0 5px;
+}
+
+#rodape-redes-sociais{
+    padding: 0;
+    margin: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    float: left;
 }

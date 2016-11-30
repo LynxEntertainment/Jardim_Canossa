@@ -161,7 +161,7 @@ class Galeria {
         
         $dados = array($id);
         
-        if($c->executaConsulta($dados)){
+        if($c->executaConsulta()){
             return true;
         }
     }

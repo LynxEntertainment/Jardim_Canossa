@@ -1,8 +1,8 @@
 <?php
 class Conexao {
-    private $host = "localhost";
-    private $user = "root";
-    private $password = "1604";
+    private $host = "jardim_canossa.mysql.dbaas.com.br";
+    private $user = "jardim_canossa";
+    private $password = "St.MC_1959";
     private $port = "3306";
     private $con = NULL;
     private $dbname = "jardim_canossa";
