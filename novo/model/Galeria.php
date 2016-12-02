@@ -167,7 +167,7 @@ class Galeria {
     }
 
     public static function listarGalerias($idioma, $pagina, $qtd) {
-        $sql = "SELECT * FROM galeria_join WHERE idioma_galeria = ? LIMIT ? , ?";
+        $sql = "SELECT * FROM galeria_join WHERE idioma_galeria = ? ORDER BY data_galeria DESC LIMIT ? , ?";
         $c = new Consulta($sql);
         
         $dados = array($idioma,(int)($pagina-1)*$qtd,(int)$qtd);
