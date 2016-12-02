@@ -96,6 +96,7 @@ require_once 'model/trocaPagina.php';
                             <a href="?view=obra-social">Obra Social M.C.</a>
                             <a href="?view=madalena-de-canossa">Sta. Madalena de Canossa</a>
                             <a href="?view=canossianas">Irmãs Canossianas</a>
+                            <a href="?view=colegio">Colégio Monsenhor Quércia</a>
                             <a href="?view=rina-guarnieri">Irmã Rina Guarnieri</a>
                             <a href="?view=colaboradores">Colaboradores</a>
                             <a href="?view=objetivos">Objetivos Esperados</a>
@@ -124,6 +125,7 @@ require_once 'model/trocaPagina.php';
                             <a href="?view=obra-social">M.C. Social Work</a>
                             <a href="?view=madalena-de-canossa">St. Magdalene of Canossa</a>
                             <a href="?view=canossianas">Canossian Sisters</a>
+                            <a href="?view=colegio">Monsenhor Quércia School</a>
                             <a href="?view=rina-guarnieri">Sister Rina Guarnieri</a>
                             <a href="?view=colaboradores">Collaborators</a>
                             <a href="?view=objetivos">Expected Goals</a>
@@ -152,6 +154,7 @@ require_once 'model/trocaPagina.php';
                             <a href="?view=obra-social">Opera Sociale M.C.</a>
                             <a href="?view=madalena-de-canossa">Sta. Maddalena di Canossa</a>
                             <a href="?view=canossianas">Suore Canossiane</a>
+                            <a href="?view=colegio">Scuola Monsenhor Quércia</a>
                             <a href="?view=rina-guarnieri">Suor Rina Guarnieri</a>
                             <a href="?view=colaboradores">Collaboratori</a>
                             <a href="?view=objetivos">Obietivi</a>
