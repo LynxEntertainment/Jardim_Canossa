@@ -41,15 +41,6 @@ require_once 'model/trocaPagina.php';
 
                     $_GET[decode(arguments[1])] = decode(arguments[2]);
                 });
-
-                $(window).click(function () {
-                    encolherSeletorIdioma();
-                });
-
-                $("#idioma").click(function () {
-                    event.stopPropagation();
-                });
-
                 atualizarIdioma();
 
             });
@@ -174,7 +165,6 @@ require_once 'model/trocaPagina.php';
                     <div class="menu-item"><a href="?view=contato">Contatto</a></div>
                 </nav>
                 <div id="idioma">
-                    <a class="trigger" href="#" onclick="expandirSeletorIdioma()"><img></a>
                     <a value="por" class="opcao-idioma" href="#" onclick="atualizarIdioma('por')"><img src="img/icone-idioma-por.png"/></a>
                     <a value="eng" class="opcao-idioma" href="#" onclick="atualizarIdioma('eng')"><img src="img/icone-idioma-eng.png"/></a>
                     <a value="ita" class="opcao-idioma" href="#" onclick="atualizarIdioma('ita')"><img src="img/icone-idioma-ita.png"/></a>

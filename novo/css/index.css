@@ -51,8 +51,7 @@ header{
     top: 5px;
     right: 0;
     height: 29px;
-    width: 44px;
-    overflow: hidden;
+    width: 132px;
     background: rgba(14, 27, 12,1);
     transition: 200ms ease-in-out;
 }
